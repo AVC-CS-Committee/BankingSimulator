@@ -1,1 +1,1 @@
-# bankingSimulator
+# BankingSimulator
