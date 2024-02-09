@@ -1,6 +1,7 @@
-/* Eddie Gomez*/
-
-/* Version 1.2 - Changes : Eliminated check object, renamed file, created object toCheck to add or reduce. */
+/* Editors: Eddie Gomez
+ * 
+ * Version 1.2 - Changes : Eliminated check object, renamed file, created object toCheck to add or reduce.
+*/
 import java.util.Scanner;
 public class LabMath {
     public static void main(String [] args) {
