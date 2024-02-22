@@ -23,25 +23,12 @@ public class Main {
     }
         
     private static void displayMenu() {
-        System.out.println("$$$$$$$\                      $$\       $$\  ");
-        System.out.println("$$  __$$\                     $$ |      \__| ");
-        System.out.println("$$ |  $$ | $$$$$$\  $$$$$$$\  $$ |  $$\ $$\ $$$$$$$\   $$$$$$\ ");
-        System.out.println("$$$$$$$\ | \____$$\ $$  __$$\ $$ | $$  |$$ |$$  __$$\ $$  __$$\ ");
-        System.out.println("$$  __$$\  $$$$$$$ |$$ |  $$ |$$$$$$  / $$ |$$ |  $$ |$$ /  $$ | ");
-        System.out.println("$$ |  $$ |$$  __$$ |$$ |  $$ |$$  _$$<  $$ |$$ |  $$ |$$ |  $$ | ");
-        System.out.println("$$$$$$$  |\$$$$$$$ |$$ |  $$ |$$ | \$$\ $$ |$$ |  $$ |\$$$$$$$ | ");
-        System.out.println("\_______/  \_______|\__|  \__|\__|  \__|\__|\__|  \__| \____$$ | ");
-        System.out.println("                                                      $$\   $$ | ");
-        System.out.println("                                                      \$$$$$$  | ");
-        System.out.println("                                                       \______/ ");
-        System.out.println(" $$$$$$\  $$\                         $$\            $$\ ");
-        System.out.println("$$  __$$\ \__|                        $$ |           $$ | ");
-        System.out.println("$$ /  \__|$$\ $$$$$$\$$$$\  $$\   $$\ $$ | $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\ ");
-        System.out.println("\$$$$$$\  $$ |$$  _$$  _$$\ $$ |  $$ |$$ | \____$$\\_$$  _|  $$  __$$\ $$  __$$\ ");
-        System.out.println(" \____$$\ $$ |$$ / $$ / $$ |$$ |  $$ |$$ | $$$$$$$ | $$ |    $$ /  $$ |$$ |  \__| ");
-        System.out.println("$$\   $$ |$$ |$$ | $$ | $$ |$$ |  $$ |$$ |$$  __$$ | $$ |$$\ $$ |  $$ |$$ | ");
-        System.out.println("\$$$$$$  |$$ |$$ | $$ | $$ |\$$$$$$  |$$ |\$$$$$$$ | \$$$$  |\$$$$$$  |$$ | ");
-        System.out.println(" \______/ \__|\__| \__| \__| \______/ \__| \_______|  \____/  \______/ \__| ");
+        System.out.println(",-.          ,                ,-.              .     . ");
+        System.out.println("|  )         |   o           (   ` o           |     | ");
+        System.out.println("|-<  ,-: ;-. | , . ;-. ,-:    `-.  . ;-.-. . . | ,-: |-  ,-. ;-. ");
+        System.out.println("|  ) | | | | |<  | | | | |   .   ) | | | | | | | | | |   | | | ");
+        System.out.println("`-'  `-` ' ' ' ` ' ' ' `-|    `-'  ' ' ' ' `-` ' `-` `-' `-' ' ");
+        System.out.println("                       `-' ");
         System.out.println("");
         System.out.println("\n================");
         System.out.println("      Menu:");
