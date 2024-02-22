@@ -23,6 +23,7 @@ public class Main {
     }
         
     private static void displayMenu() {
+        System.out.println("$$$$$$$\                      $$\       $$\  ");
         System.out.println("\n================");
         System.out.println("      Menu:");
         System.out.println("================");
