@@ -6,12 +6,14 @@ import java.util.Scanner;
 public class LabMath {
     public static void main(String [] args) {
         Scanner input = new Scanner(System.in);
+        InterestRate giveYears = new InterestRate();
         CheckMoney toCheck = new CheckMoney();
         /* to ask */
         String confirm;
         /* for adding or removing money */
         double deposit;
         double deduct;
+        int years;
 
         System.out.println("Do you want to deposit?");
         confirm = input.next();
@@ -36,5 +38,18 @@ public class LabMath {
         }
 
         System.out.print(toCheck.getAmount());
+
+        System.out.println("Do you want to compund your amount?")
+        confirm = input.next();
+        confirm = confirm.toLowerCase();
+        if (confirm.compareTo("yes") == 0) {
+            System.out.println("How much?");
+            years = input.nextInt();
+            giveYears.setInterest(years);
+        } else if (confirm.compareTo("no") == 0) {
+            System.out.println("Have a nice day!");
+        } else {
+            System.out.println("Invalid input!");
+        }
     }
 }
