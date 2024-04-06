@@ -16,11 +16,11 @@ public class BankAccount {
         this.profileName = userName;
     }
 
-    public void toDeduct(double userDeduction) {
+    public void withdraw(double userDeduction) {
         this.balance -= userDeduction;
     }
 
-    public void toAdd(double userAddition) {
+    public void deposit(double userAddition) {
         this.balance += userAddition;
     }
 
@@ -28,11 +28,15 @@ public class BankAccount {
         return balance;
     }
 
+    public String getProfileName() {
+        return profileName;
+    }
+
     public void printInfo() {
-        System.out.println(profileName + "current balance: " + balance);
+        System.out.println(profileName + " current balance: " + balance);
     }
 
     public void printUpdateInfo() {
-        System.out.println(profileName + "updated balance: " + balance);
+        System.out.println(profileName + " updated balance: " + balance);
     }
 }
