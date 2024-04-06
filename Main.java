@@ -87,7 +87,7 @@ import java.util.ArrayList;
 
      private static void addAccount() {
          System.out.println("Enter the profile name for the new account:");
-         String profileName = scanner.nextLine();
+         String profileName = scanner.nextLine(); // FIXME: Consume new line
          System.out.println("Enter the initial balance for the new account:");
          double balance = scanner.nextDouble();
          profiles.add(new BankAccount(balance, profileName));
@@ -125,10 +125,11 @@ import java.util.ArrayList;
          char choice;
     
          System.out.println("Welcome to the Bank App!");
+         /*   FOR FUNCTIONALITY OF THE BANKING APP ADD HERE !!!!!!!!!!!!!!!!!!!!!!!!!! */ 
          System.out.println("This program lets you simulate having a real bank with multiple profiles!");
          System.out.println("First, let's start with your first profile:");
          System.out.println("What will your first profile name be?:");
-         profileName = scanner.nextLine();  // Consume the newline character
+         profileName = scanner.nextLine();  // FIXME : Consume the newline character
          System.out.println(profileName + " is that correct? 1: Yes, 2: No");
          choice = scanner.next().charAt(0);
          while (choice != '1') {
@@ -136,7 +137,7 @@ import java.util.ArrayList;
                  System.out.println("Invalid choice! Try 1: Yes or 2: No");
                  choice = scanner.next().charAt(0);
              }
-             scanner.nextLine(); // Consume the newline character left by next() or nextLine()
+             scanner.nextLine(); // FIXME : Consume the newline character left by next() or nextLine()
              System.out.println("What will your first profile name be?:");
              profileName = scanner.nextLine();
              System.out.println(profileName + " is that correct? 1: Yes, 2: No");
