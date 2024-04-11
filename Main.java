@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
  public class Main {
      private static ArrayList<BankAccount> profiles = new ArrayList<BankAccount>();
-     private static Scanner scanner = new Scanner(System.in);
      public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
          displayMenu();
          char choice;
          choice = scanner.next().charAt(0);
@@ -25,6 +25,7 @@ import java.util.ArrayList;
      }
 
      private static void menuOptions() {
+         Scanner scanner = new Scanner(System.in);
          System.out.println("Menu Options:");
          System.out.println("1. Deposit money.");
          System.out.println("2. Withdraw money.");
@@ -59,6 +60,7 @@ import java.util.ArrayList;
      }
     
      private static void depositMoney() {
+         Scanner scanner = new Scanner(System.in);
          System.out.println("Enter the amount to deposit:");
          double amount = scanner.nextDouble();
          selectAccount().deposit(amount);
@@ -67,6 +69,7 @@ import java.util.ArrayList;
      }
     
      private static void withdrawMoney() {
+         Scanner scanner = new Scanner(System.in);
          System.out.println("Enter the amount to withdraw:");
          double amount = scanner.nextDouble();
          BankAccount selectedAccount = selectAccount();
@@ -86,8 +89,9 @@ import java.util.ArrayList;
      }
 
      private static void addAccount() {
+         Scanner scanner = new Scanner(System.in);
          System.out.println("Enter the profile name for the new account:");
-         String profileName = scanner.nextLine(); // FIXME: Consume new line
+         String profileName = scanner.nextLine();
          System.out.println("Enter the initial balance for the new account:");
          double balance = scanner.nextDouble();
          profiles.add(new BankAccount(balance, profileName));
@@ -96,6 +100,7 @@ import java.util.ArrayList;
      }
 
      private static BankAccount selectAccount() {
+         Scanner scanner = new Scanner(System.in);
          System.out.println("Select an account:");
          for (int i = 0; i < profiles.size(); i++) {
              System.out.println((i + 1) + ". " + profiles.get(i).getProfileName());
@@ -120,6 +125,7 @@ import java.util.ArrayList;
          System.out.println("Enter your choice (1 or 2): ");
      }
      private static void enterBankApp() {
+         Scanner scanner = new Scanner(System.in);
          String profileName;
          double balance;
          char choice;
@@ -129,7 +135,7 @@ import java.util.ArrayList;
          System.out.println("This program lets you simulate having a real bank with multiple profiles!");
          System.out.println("First, let's start with your first profile:");
          System.out.println("What will your first profile name be?:");
-         profileName = scanner.nextLine();  // FIXME : Consume the newline character
+         profileName = scanner.nextLine();
          System.out.println(profileName + " is that correct? 1: Yes, 2: No");
          choice = scanner.next().charAt(0);
          while (choice != '1') {
@@ -137,7 +143,7 @@ import java.util.ArrayList;
                  System.out.println("Invalid choice! Try 1: Yes or 2: No");
                  choice = scanner.next().charAt(0);
              }
-             scanner.nextLine(); // FIXME : Consume the newline character left by next() or nextLine()
+             scanner.nextLine();
              System.out.println("What will your first profile name be?:");
              profileName = scanner.nextLine();
              System.out.println(profileName + " is that correct? 1: Yes, 2: No");
@@ -153,5 +159,4 @@ import java.util.ArrayList;
          System.out.println("Thank you for using the app, Goodbye!");
          System.exit(0);
      }
-    
  }
