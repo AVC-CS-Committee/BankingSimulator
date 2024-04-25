@@ -24,6 +24,10 @@ public class BankAccount {
         this.balance += userAddition;
     }
 
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     public double getBalance() {
         return balance;
     }

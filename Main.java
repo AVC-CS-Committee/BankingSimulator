@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
  public class Main {
      private static ArrayList<BankAccount> profiles = new ArrayList<BankAccount>();
+     private static InterestRate calculateRate = new InterestRate();
      public static void main(String[] args) {
          Scanner scanner = new Scanner(System.in);
          displayMenu();
@@ -31,7 +32,8 @@ import java.util.ArrayList;
          System.out.println("2. Withdraw money.");
          System.out.println("3. View account details.");
          System.out.println("4. Add new account.");
-         System.out.println("5. Exit.");
+         System.out.println("5. Calculate interest rate.");
+         System.out.println("6. Exit.");
          System.out.println("Enter your choice: ");
 
          char choice = scanner.next().charAt(0);
@@ -49,6 +51,9 @@ import java.util.ArrayList;
                  addAccount();
                  break;
              case '5':
+                 calculateInterest();
+                 break;
+             case '6':
                  System.out.println("Exiting program...");
                  System.exit(0);
                  break;
@@ -80,6 +85,24 @@ import java.util.ArrayList;
              selectedAccount.deposit(amount);
              System.out.println("Insufficient funds!");
          }
+         menuOptions();
+     }
+
+     private static void calculateInterest() {
+         Scanner scanner = new Scanner(System.in);
+         System.out.println("Enter the number of years to calculate interest for:");
+         int years = scanner.nextInt();
+         System.out.println("Enter your interest rate:");
+         double interestRate = scanner.nextDouble();
+         System.out.println("Enter compounding period:");
+         int compound = scanner.nextInt();
+         System.out.println("Enter account to make the interest: ");
+         BankAccount selectedAccount = selectAccount();
+         double balance = selectedAccount.getBalance();
+         calculateRate.getTotalInterest(interestRate, balance, compound, years);
+         System.out.println("Original balance: " + selectedAccount.getBalance());
+         System.out.println("New balance after time of years: " + Math.ceil(calculateRate.getTotalInterest(interestRate, balance, compound, years)));
+         selectedAccount.setBalance(Math.ceil(calculateRate.getTotalInterest(interestRate, balance, compound, years)));
          menuOptions();
      }
     
